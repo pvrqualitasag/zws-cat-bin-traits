@@ -4,11 +4,12 @@ subtitle: "A digest and further comments on the thesis"
 author: Peter von Rohr
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_handout:
-    citation_package: natbib
-    latex_engine: xelatex
+  bookdown::pdf_document2: default  
   tufte::tufte_html: default
   tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
 bibliography: bibliography.bib
@@ -25,6 +26,8 @@ met <- rmdhelp::MendeleyExportToolR6$new()
 met$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
                               rstudioapi::getActiveDocumentContext()$path,
                               whereami::thisfile()))
+# rmdhelp::show_knit_hook_call()
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 ```
 
 # Disclaimer
@@ -38,9 +41,33 @@ This chapter summarises chapter 2 of `r met$add("Zihlmann2020")` and gives some 
 The term `Livestock Breeding` is often used ambiguously. Very often not sharp distinction between animal husbandry, livestock production and livestock breeding is drawn. In the context of this document, the term `Livestock Breeding` is defined as follows.
 
 ```{definition, name: Livestock Breeding, label=livestockbreeding}
-Livestock Breeding is the activity of improving a certain livestock population at the level of their genetic architecture. 
+Livestock Breeding improves livestock populations at the level of their genetic architecture. Improvement is meant with respect to a pre-defined breeding goal.
+```
+
+A breeding goal consists of a set of characteristics or properties - also referred to as traits - of the livestock animals that are desirable for the owner. Since most livestock owners of animals base their economic outcome on selling animal products, the desirability of the traits is closely associated with the profitability of an agricultural enterprise. From the point of view of agricultural economics, livestock animals are production factors and belong to the capital of the enterprise. The production process within the livestock animal enterprise use inputs such as forage, water, housing, veterinary care, labor and others to produce output such as milk, meat, offspring animals and other products. The factors in the input category must be bought and create costs. All products in the output category can be sold and therebye create revenue or income. The difference between revenue and costs is profit which the enterprise can use for investments. 
+
+```{r livestock-production-system, echo=FALSE, hook_convert_odg=TRUE, fig_path="odg"}
+#rmdhelp::use_odg_graphic(ps_path = "odg/livestock-production-system.odg")
+knitr::include_graphics(path = "odg/livestock-production-system.png")
+```
+
+To preserve profitability of a livestock production enterprise, the whole system must constantly be improved. Improvements to the livestock production system can be made at different levels. One type of improvements can be done as short term measures to constantly try to optimize the every-day production process. These measures can include
+
+* avoiding wasted resources
+* optimal quality control when buying input factors
+* seeking for good conditions and low costs when buying input factors
+* finding good clients which pay a high price for the product
+* treat animals with respect and with good care to avoid illnesses to keep veterinary costs low and to guarantee a high level of production with a good quality.
+
+Besides these short-term improvements, there are also a number of long-term measures available that help to have good profitability of the livestock production enterprise. One of these long-term meansures consist of the improvement of the genetic architecture of the livestock animals. The term `genetic architecture` stands for the completeness of the genetic information of any given animal. That information in encoded in a molecule called DNA and can be found in every cell of a livestock animal. 
+
+Why the genetic arcchitecture of the livestock animals is important for the livestock production enterprise, is described in one of the following sections on Quantitative Genetics. An important statement that we can make at this point is that animals with an improved genetic architecture are more productive, can produce more efficiently, are healthier due to their improved adaptation to their environment and have a reduced ecological footprint.
+
+As seen in the previous section, with respect to a long term planning horizon of a livestock enterprise it is important to improve the genetic architecture of the livestock animals. The main question now is how can we improve the genetic architecture of a population of livestock animals? This question will be answered in the following section on quantitative genetics.
+
+
+## Quantitative Genetics
 
 
 
-
-# References 
+# References  
