@@ -1,0 +1,24 @@
+#' ---
+#' title: "Collecting Data For MT2020"
+#' date:  "2020-04-07"
+#' ---
+#' 
+#' ## Data
+quagadmin@1-htz:/qualstorzws01/data_projekte/projekte/tmbsdc/work/bv/VCE/data/new$ wc -l `pwd`/data_vce_bv_new_rs3.dat
+17586 /qualstorzws01/data_projekte/projekte/tmbsdc/work/bv/VCE/data/new/data_vce_bv_new_rs3.dat
+
+
+#' ## Animals with observations
+-rwxrwxr-x 1 swidmer zwsgrp 193435 Jul 17  2019 /qualstorzws01/data_projekte/projekte/tmbsdc/work/bv/VCE/work/ma_ct_test/new/rs3/data_id_rs3_bv.dat
+$ wc -l `pwd`/data_id_rs3_bv.dat
+17585 /qualstorzws01/data_projekte/projekte/tmbsdc/work/bv/VCE/work/ma_ct_test/new/rs3/data_id_rs3_bv.dat
+
+#' ## Pedigree
+#' 
+#' 
+
+
+
+#' ## CAS Data 
+#' See under: /qualstorzws01/data_projekte/projekte/aufzuchtverluste/work/bv_350_allTraits
+

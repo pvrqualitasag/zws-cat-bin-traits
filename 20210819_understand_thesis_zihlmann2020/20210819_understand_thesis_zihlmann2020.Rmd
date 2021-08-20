@@ -1,0 +1,46 @@
+---
+title: Understanding Thesis Zihlmann2020
+subtitle: "A digest and further comments on the thesis"
+author: Peter von Rohr
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_html: default
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: bibliography.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+# initialise mendeley reference object
+met <- rmdhelp::MendeleyExportToolR6$new()
+met$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
+                              rstudioapi::getActiveDocumentContext()$path,
+                              whereami::thisfile()))
+```
+
+# Disclaimer
+This document summarizes the concepts of `r met$add("Zihlmann2020")` and tries to infer potential applications for practical use.
+
+
+# Theory
+This chapter summarises chapter 2 of `r met$add("Zihlmann2020")` and gives some more details on the context of the thesis. Chapter 2 of the thesis starts with an outline of some concepts of quantitative genetics. Here, we want to first give a short description of livestock breeding which is the main motivation of our practical work.
+
+## Livestock Breeding
+The term `Livestock Breeding` is often used ambiguously. Very often not sharp distinction between animal husbandry, livestock production and livestock breeding is drawn. In the context of this document, the term `Livestock Breeding` is defined as follows.
+
+```{definition, name: Livestock Breeding, label=livestockbreeding}
+Livestock Breeding is the activity of improving a certain livestock population at the level of their genetic architecture. 
+
+
+
+
+# References 

@@ -1,0 +1,17 @@
+---
+title: "Qualitas AG"
+author: "Peter von Rohr"
+date: "2/17/2020"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Qualitas
+
+* Service company for livestock breeding organisations
+* Focus on ICT-services and data science (prediction of breeding values)
+
+
