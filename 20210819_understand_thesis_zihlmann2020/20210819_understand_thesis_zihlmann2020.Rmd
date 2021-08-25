@@ -67,6 +67,33 @@ As seen in the previous section, with respect to a long term planning horizon of
 
 
 ## Quantitative Genetics
+Livestock animals show considerable variation in the measured or observed values in the traits of agricultural interest. The collection of all the measured and observed values in the traits of interest are referred to as _phenotype_. The phenotype is influenced by different factors. These factors can be grouped into the following two categories. 
+
+1. genetic factors ($G$)
+2. environmental factors ($E$)
+
+This dependence is often stated by the following identity 
+
+$$P = G + E$$
+
+That means the phenotype can be decomposed into a genetic part ($G$) and into an environmental part ($E$). The genetic part ($G$) is often referred to as _genotype_. The parametrization of the above shown decomposition of the phenotye is as such that the environmental component is defined as a deviation. That means the genotypic value of an animal with a certain genotype $G$ is defined as the average phenotypic value if that animal would have observations in very many environments. At this point, we have to note that absolutely no interactions between the components $G$ and $E$ are assumed. Hence the above shown identity assumes that the components $G$ and $E$ have a strictly additive effect on the phenotype $P$. 
+
+
+## Decomposition of $G$
+For a better understanding of the process of how properties, characteristics and traits are passed from parents to offspring, the genetic component $G$ must be further decomposed. Most livestock animals are diploids meaning that most of the cells carry pairs of chromosomes with corresponding loci. Each locus (also referred to as _gene_) has two possibly different forms called _alleles_. The two alleles were inherited one from the dam and one from the sire. The different alleles may have different effects on the phenotypic value. 
+
+Linear regression is commonly used to estimate the effect of one quantity on another one. The allele content $N$ is defined as the number of copies of the minor allele with a positive effect at locus $i$ in the genome of an animal. For diploid organisms $N \in \{0,1,2\}$. The regression of the genotypic value $G$ of locus $i$ onto the allele content $N$ can be written as
+
+\{__TODO__: Clear the following regression and make it specific for a given genotype \}
+
+\begin{equation}
+G = \mu_{G} + \sum_{j=1}^n \alpha\ N_{j} + \delta
+(\#eq:decompgeno)
+\end{equation}
+
+where $\mu_G$ is the mean genotypic value in the population, $n$ is the number of alleles^[The meaning of then number of alleles $n$ corresponds to the number of individuals in the population, because the number of alleles at a locus in a given individual is $N_j$], $\alpha$ is the slope of the predictor $N_i$ corresponding to the number of minor alleles in individual $i$ and $\delta$ is the residual error^[The decomposition in \@ref(eq:decompgeno) is comparable to the decomposition of the genotypic value into population mean, breeding value and dominance deviation.].
+
+The slope $\alpha$ is denoted as the _additive genetic effect_ of the minor allele at locus $i$^[The meaning of the term "allele $i$" is most likely, the minor allele with a positive effect at locus $i$.]. 
 
 
 
